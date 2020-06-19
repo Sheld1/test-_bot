@@ -7,7 +7,7 @@ bot = telebot.TeleBot('1134044846:AAHAV1GYnv2vdyP6y83XYVD_fqg8hFL8wWs')
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
-    sti = open ('C:/Users/Daniil/Desktop/Учёба/телеграм бот/welcome.webp', 'rb')
+    sti = open ('welcome.webp', 'rb')
     bot.send_sticker(message.chat.id, sti)
 
     #keyboard
