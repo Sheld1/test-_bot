@@ -55,24 +55,29 @@ choiser = ['Может стоит попробовать - ',
 def get_text_messages(message):
     if message.chat.type == 'private':
         if message.text == '🍺Пиво':
-            bot.send_message(message.chat.id, str(random.choice(choiser)+random.choice(pivo)))
-            if message.text == 'Essa Lime & Mint':
+	    p=random.choice(pivo)
+            bot.send_message(message.chat.id, str(random.choice(choiser)+p))
+            if p == 'Essa Lime & Mint':
                 bot.send_sticker(message.chat.id, sti1)
         elif message.text == '🍷Вино':
-            bot.send_message(message.chat.id, str(random.choice(vine)))
-            if message.text == 'Essa Lime & Mint':
+            v=random.choice(vine)
+            bot.send_message(message.chat.id, v)
+            if v == 'Может стоит попробовать красное сухое вино из ЮАР - "BARISTA PINOTAGE"?':
                 bot.send_sticker(message.chat.id, sti2)
         elif message.text == 'Ром':
-            bot.send_message(message.chat.id, str(random.choice(choiser) + random.choice(rum)))
-            if message.text == 'Essa Lime & Mint':
+            r=random.choice(rum)
+            bot.send_message(message.chat.id, str(random.choice(choiser) + r))
+            If r == 'CAPTAIN MORGAN Original Spiced Gold':
                 bot.send_sticker(message.chat.id, sti3)
-        elif message.text == 'Коньяк':
-            bot.send_message(message.chat.id, str(random.choice(choiser) + random.choice(cognaс)))
-            if message.text == 'Essa Lime & Mint':
+        elif c == 'Коньяк':
+            c=random.choice(cognac)
+            bot.send_message(message.chat.id, str(random.choice(choiser) + c))
+            if message.text == 'Коньяк армянский Старый КС Шалахо 10 лет':
                 bot.send_sticker(message.chat.id, sti4)
-        elif message.text == 'Виски':
-            bot.send_message(message.chat.id, str(random.choice(choiser) + random.choice(whiskey)))
-            if message.text == 'Essa Lime & Mint':
+        elif w == 'Виски':
+            w=random.choice(whiskey)
+            bot.send_message(message.chat.id, str(random.choice(choiser) + w))
+            if message.text == 'Grant’s tripple wood':
                 bot.send_sticker(message.chat.id, sti5)
         else:
             bot.send_message(message.chat.id, 'Я не знаю что на это ответить 😥')
