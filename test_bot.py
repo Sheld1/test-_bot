@@ -69,12 +69,12 @@ def get_text_messages(message):
             bot.send_message(message.chat.id, str(random.choice(choiser) + r))
             If r == 'CAPTAIN MORGAN Original Spiced Gold':
                 bot.send_sticker(message.chat.id, sti3)
-        elif c == 'Коньяк':
+        elif message.txt == 'Коньяк':
             c=random.choice(cognac)
             bot.send_message(message.chat.id, str(random.choice(choiser) + c))
             if message.text == 'Коньяк армянский Старый КС Шалахо 10 лет':
                 bot.send_sticker(message.chat.id, sti4)
-        elif w == 'Виски':
+        elif message.txt == 'Виски':
             w=random.choice(whiskey)
             bot.send_message(message.chat.id, str(random.choice(choiser) + w))
             if message.text == 'Grant’s tripple wood':
